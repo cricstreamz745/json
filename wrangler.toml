@@ -1,3 +1,6 @@
-name = "mpd-worker"
+name = "nz-json-api"
 main = "index.js"
-compatibility_date = "2024-01-01"
+compatibility_date = "2024-12-01"
+
+[env.production]
+workers_dev = true
