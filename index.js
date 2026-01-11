@@ -1,13 +1,14 @@
 export default {
   async fetch(request, env, ctx) {
     try {
-      const nzUrl = "https://raw.githubusercontent.com/cricstreamz745/Web-Iptv/refs/heads/main/output.json"; // <-- PUT YOUR nz.json URL
+      const nzUrl = "https://raw.githubusercontent.com/cricstreamz745/Web-Iptv/refs/heads/main/output.json";
 
       const nzRes = await fetch(nzUrl);
       const nzData = await nzRes.json();
 
       const result = [];
 
+      // Correct loop
       for (const item of nzData.channels) {
         const name = item.name;
         const thumb = item.thumb;
@@ -50,9 +51,7 @@ export default {
       });
 
     } catch (err) {
-      return new Response(JSON.stringify({
-        error: err.message
-      }), { status: 500 });
+      return new Response(JSON.stringify({ error: err.message }), { status: 500 });
     }
   }
 };
