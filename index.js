@@ -9,6 +9,7 @@ export default {
       const filtered = data.map(item => ({
         name: item.name,
         mpd: item.mpd,
+        kid: item.kid,
         key: item.key
       }));
 
