@@ -1,6 +1,6 @@
 export default {
   async fetch(request) {
-    const SOURCE_URL = "https://raw.githubusercontent.com/cricstreamz745/Web-Iptv/refs/heads/main/output.json";
+    const SOURCE_URL = "https://raw.githubusercontent.com/cricstreamz745/Web-Iptv/refs/heads/main/outut.json";
 
     try {
       const res = await fetch(SOURCE_URL);
